@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\eMids.QA.Application.Common\emids.QA.Application.Common.csproj" />
+    <ProjectReference Include="..\eMids.QA.Application.DataAccess\emids.QA.Application.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>

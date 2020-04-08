@@ -1,0 +1,74 @@
+﻿@model emids.QA.Application.Common.Patient
+@{
+    ViewData["Title"] = "Patient Details";
+}
+<h2>Patient Details - @Model.Identifier</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.FirstName)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Gender)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Gender)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PhoneNumber)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.PhoneNumber)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Height)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Height)
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-6">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.LastName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.DateOfBirth)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.DateOfBirth)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MemberId)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.MemberId)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Weight)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Weight)
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.PatientId }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Delete", "Delete", new { id = Model.PatientId }, new { @class = "btn btn-primary" })
+            <a asp-action="Index"><input type="button" value="Cancel" class="btn btn-danger" /></a>
+        </div>
+    </div>
+</div>
